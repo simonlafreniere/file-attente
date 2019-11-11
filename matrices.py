@@ -1,5 +1,6 @@
 from numbers import Number
 import random as rd
+import time
 
 
 class Matrice:
@@ -88,6 +89,7 @@ class Matrice:
             reponse = Matrice(self.lignes, other.colonnes)
             # parcours de la matrice reponseante
             for i in range(self.lignes):
+                time.sleep(0.1)  # slow it down sinon c'est trop vite et la diff est en milisecondes..
                 for j in range(other.colonnes):
                     # ligne de m multiplie colonne de n
                     for k in range(self.colonnes):
