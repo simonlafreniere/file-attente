@@ -23,9 +23,10 @@ def clients_thread(client_list):
     for client in client_list:
         while wait_condition > 0:
             wait_condition = y[rd.randint(0, 50)]
-            time.sleep(0.5)
+            time.sleep(1)
         client.t_attente_start = datetime.now()
         file_attente.append(client)
+        time.sleep(1)
     clients_running = False
     print("Clients thread finished..")
     threads_alive -= 1
